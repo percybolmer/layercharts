@@ -33,10 +33,10 @@
 	>
 		<Svg>
 			<!-- This Class is for styling the INFILL area below the value, so Y0 -> Y current value -->
-			<LinearGradient class="from-accent-500/50 to-accent-500/0" vertical let:url>
+			<LinearGradient class="from-accent-500/50 to-accent-500/0" let:url>
 				<!-- This Class styles is the small "border" that highlights the Graphs value AFTER hover location -->
 				<Area line={{ class: 'stroke-2 stroke-accent-500 opacity-20' }} fill={url} />
-				<RectClipPath x={0} y={0} width={tooltip.data ? tooltip.left : width} {height} spring>
+				<RectClipPath x={0} y={0} width={tooltip.data ? tooltip.left : width} {height} spring={false}>
 					<!-- This class styles is the small "border" that highlights the Graphs current value UP UNTIL Hover location -->
 					<Area line={{ class: 'stroke-2 stroke-accent-500' }} fill={url} />
 				</RectClipPath>
